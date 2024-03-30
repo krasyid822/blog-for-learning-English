@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>English Conservation I</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+        }
+    </style>
+    <script>
+        // Retrieve the name from the index.html file
+        var name = localStorage.getItem('name');
+
+        // Display the welcome message
+        window.onload = function() {
+            var welcomeMessage = document.getElementById('welcome-message');
+            welcomeMessage.innerHTML = 'Selamat Datang di Kelas Konservasi I, \n'+ name + '!';
+        };
+    </script>
+</head>
+<body>
+    <h1 id="welcome-message"></h1>
+    <h2>TO-BE</h2>
+    <p>TO-BE adalah kata kerja yang digunakan untuk menyatakan keadaan atau situasi yang akan terjadi di masa depan. TO-BE terdiri dari beberapa bentuk, yaitu:</p>
+    <ul>
+        <li>am</li>
+        <li>is</li>
+        <li>are</li>
+    </ul>
+    <p>Contoh penggunaan TO-BE:</p>
+    <ul>
+        <li>I am a student.</li>
+        <li>She is a teacher.</li>
+        <li>We are students.</li>
+    </ul>
+    <p>LATIHAN:</p>
+    <p>Ubahlah kalimat-kalimat berikut ke dalam bentuk TO-BE!</p>
+    <ol>
+        <li>She a doctor.</li>
+        <li>They students.</li>
+        <li>He a teacher.</li>
+    </ol>
+    <i>gunakan huruf kecil!</i>
+    <form>
+        <label for="answer1">Jawaban 1:</label>
+        <input type="text" id="answer1" name="answer1" required>
+        <br>
+        <label for="answer2">Jawaban 2:</label>
+        <input type="text" id="answer2" name="answer2" required>
+        <br>
+        <label for="answer3">Jawaban 3:</label>
+        <input type="text" id="answer3" name="answer3" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        // Define the correct answers
+        var correctAnswers = ['she is a doctor', 'they are students', 'he is a teacher'];
+
+        // Validate the answers
+        document.querySelector('form').onsubmit = function(event) {
+            event.preventDefault();
+            var answers = [
+                document.getElementById('answer1').value,
+                document.getElementById('answer2').value,
+                document.getElementById('answer3').value
+            ];
+
+            var score = 0;
+            for (var i = 0; i < answers.length; i++) {
+                if (answers[i] === correctAnswers[i]) {
+                    score++;
+                }
+            }
+
+            alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers.length);
+        };
+    </script>
+
+</body>
+</html>
