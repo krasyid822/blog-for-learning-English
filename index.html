@@ -69,6 +69,11 @@
             if (classLevel === "") {
                 alert("Please select a class level");
                 return false;
+            } else if (classLevel === "English Conservation I") {
+                var name = document.getElementById("name").value;
+                localStorage.setItem("name", name);
+                window.location.href = "level1.html";
+                return false;
             }
         }
     </script>
