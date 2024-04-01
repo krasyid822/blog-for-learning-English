@@ -6,6 +6,112 @@
         body {
             font-family: "Arial", sans-serif;
         }
+        form, input, button {
+            font-size: 16px;
+            transform: scale(1);
+        }
+    </style>
+    <script>
+        // Retrieve the name from the index.html file
+        var name = localStorage.getItem('name');
+
+        // Display the welcome message
+        window.onload = function() {
+            var welcomeMessage = document.getElementById('welcome-message');
+            welcomeMessage.innerHTML = 'Selamat Datang di Kelas Konservasi I, \n'+ name + '!';
+        };
+    </script>
+</head>
+<body>
+    <h1 id="welcome-message"></h1>
+    <h2>TO-BE</h2>
+    <p>TO-BE adalah kata kerja yang digunakan untuk menyatakan keadaan atau situasi yang akan terjadi di masa depan. TO-BE terdiri dari beberapa bentuk, yaitu:</p>
+    <ul>
+        <li>am</li>
+        <li>is</li>
+        <li>are</li>
+    </ul>
+    <p>Contoh penggunaan TO-BE:</p>
+    <ul>
+        <li>I am a student.</li>
+        <li>She is a teacher.</li>
+        <li>We are students.</li>
+    </ul>
+    <p>LATIHAN:</p>
+    <p>Ubahlah kalimat-kalimat berikut ke dalam bentuk TO-BE!</p>
+    <ol>
+        <li>She a doctor.</li>
+        <li>They students.</li>
+        <li>He a teacher.</li>
+    </ol>
+    <i>gunakan huruf kecil!</i>
+    <form>
+        <label for="answer1">Jawaban 1:</label>
+        <input type="text" id="answer1" name="answer1" required>
+        <br>
+        <label for="answer2">Jawaban 2:</label>
+        <input type="text" id="answer2" name="answer2" required>
+        <br>
+        <label for="answer3">Jawaban 3:</label>
+        <input type="text" id="answer3" name="answer3" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        // Define the correct answers
+        var correctAnswers = ['she is a doctor', 'they are students', 'he is a teacher'];
+
+        // Validate the answers
+        document.querySelector('form').onsubmit = function(event) {
+            event.preventDefault();
+            var answers = [
+                document.getElementById('answer1').value,
+                document.getElementById('answer2').value,
+                document.getElementById('answer3').value
+            ];
+
+            var score = 0;
+            for (var i = 0; i < answers.length; i++) {
+                if (answers[i] === correctAnswers[i]) {
+                    score++;
+                }
+            }
+
+            alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers.length);
+        };
+    </script>
+
+    <h2>PART OF SPEECH</h2>
+    <p>Part of speech adalah klasifikasi kata berdasarkan fungsinya dalam kalimat. Part of speech terdiri dari beberapa jenis, yaitu:</p>
+    <ul>
+        <li>Noun</li>
+        <li>Verb</li>
+        <li>Adjective</li>
+        <li>Adverb</li>
+        <li>Pronoun</li>
+        <li>Preposition</li>
+        <li>Conjunction</li>
+        <li>Interjection</li>
+    </ul>
+    <p>Contoh penggunaan part of speech:</p>
+    <ul>
+        <li>Noun: I am a student.</li>
+        <li>Verb: She is teaching English.</li>
+        <li>Adjective: He is a good student.</li>
+        <li>Adverb: She speaks English fluently.</li>
+        <li>Pronoun: They are students.</li>
+        <li>Preposition: She is in the classroom.</li>
+        <li>Conjunction: She is a teacher and a student.</li>
+    </ul>
+</body>
+</html>
+<html>
+<head>
+    <title>English Conservation I</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+        }
     </style>
     <script>
         // Retrieve the name from the index.html file
@@ -414,6 +520,319 @@
         };
     </script>
     
+    <h2>COMPARATIVE & SUPERLATIVE DEGREE</h2>
+    <p>Comparative & superlative degree adalah bentuk kata sifat yang digunakan untuk membandingkan dua atau lebih benda atau orang.</p>
+    <p>Comparative degree digunakan untuk membandingkan dua benda atau orang, sedangkan superlative degree digunakan untuk membandingkan tiga atau lebih benda atau orang.</p>
+    <p>Contoh penggunaan comparative & superlative degree:</p>
+    <ul>
+        <li>Comparative degree: She is taller than her sister.</li>
+        <li>Superlative degree: She is the tallest
+        <li>Comparative degree: This book is more interesting than that book.</li>
+        <li>Superlative degree: This book is the most interesting.</li>
+    </ul>
+    <p>LATIHAN:</p>
+    <p>Ubahlah kata sifat berikut ke dalam bentuk comparative & superlative degree!</p>
+    Pisahkan jawaban dengan koma. Contoh: <i>smaller, the smallest</i>
+    <ol>
+        <li>good</li>
+        <li>bad</li>
+        <li>big</li>
+    </ol>
+    <i>gunakan huruf kecil!</i>
+    <form>
+        <label for="answer20">Jawaban 1:</label>
+        <input type="text" id="answer20" name="answer20" required>
+        <br>
+        <label for="answer21">Jawaban 2:</label>
+        <input type="text" id="answer21" name="answer21" required>
+        <br>
+        <label for="answer22">Jawaban 3:</label>
+        <input type="text" id="answer22" name="answer22" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        // Define the correct answers
+        var correctAnswers7 = ['better, the best', 'worse, the worst', 'bigger, the biggest'];
+
+        // Validate the answers
+        document.querySelectorAll('form')[6].onsubmit = function(event) {
+            event.preventDefault();
+            var answers = [
+                document.getElementById('answer20').value,
+                document.getElementById('answer21').value,
+                document.getElementById('answer22').value
+            ];
+
+            var score = 0;
+            for (var i = 0; i < answers.length; i++) {
+                if (answers[i] === correctAnswers7[i]) {
+                    score++;
+                }
+            }
+
+            alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers7.length);
+        };
+    </script>
+
+    <h2>MODAL</h2>
+    <p>Modal adalah kata kerja bantu yang digunakan untuk menyatakan kemungkinan, keharusan, kemampuan, dan keinginan.</p>
+    Kata yang termasuk dalam modal adalah: <i>can, could, may, might, must, shall, should, will, would.</i>
+    <p>Contoh penggunaan modal:</p>
+    <ul>
+        <li>Can: She can speak English fluently.</li>
+        <li>Might: She might come to the party tonight.</li>
+        <li>Should: You should apologize for your mistake.</li>
+        <li>Will: They will go to the beach next weekend.</li>
+    </ul>
+    <p>LATIHAN:</p>
+    <p>Lengkapi kalimat-kalimat berikut dengan modal yang tepat!</p>
+    <ol>
+        <li>She ___ speak English fluently.</li>
+        <li>He ___ when he was a child.</li>
+        <li>You ___ the room now.</li>
+        <li>She ___ to the party tonight.</li>
+        <li>You ___ your homework before you go to bed.</li>
+        <li>We ___ at the park tomorrow.</li>
+        <li>You ___ for your mistake.</li>
+        <li>They ___ to the beach next weekend.</li>
+        <li>She ___ to have a cup of tea.</li>
+    </ol>
+    <i>gunakan huruf kecil!</i>
+    <form>
+        <label for="answer23">Jawaban 1:</label>
+        <input type="text" id="answer23" name="answer23" required>
+        <br>
+        <label for="answer24">Jawaban 2:</label>
+        <input type="text" id="answer24" name="answer24" required>
+        <br>
+        <label for="answer25">Jawaban 3:</label>
+        <input type="text" id="answer25" name="answer25" required>
+        <br>
+        <label for="answer26">Jawaban 4:</label>
+        <input type="text" id="answer26" name="answer26" required>
+        <br>
+        <label for="answer27">Jawaban 5:</label>
+        <input type="text" id="answer27" name="answer27" required>
+        <br>
+        <label for="answer28">Jawaban 6:</label>
+        <input type="text" id="answer28" name="answer28" required>
+        <br>
+        <label for="answer29">Jawaban 7:</label>
+        <input type="text" id="answer29" name="answer29" required>
+        <br>
+        <label for="answer30">Jawaban 8:</label>
+        <input type="text" id="answer30" name="answer30" required>
+        <br>
+        <label for="answer31">Jawaban 9:</label>
+        <input type="text" id="answer31" name="answer31" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        // Define the correct answers
+        var correctAnswers8 = ['can', 'could', 'may', 'might', 'must', 'shall', 'should', 'will', 'would'];
+
+        // Validate the answers
+        document.querySelectorAll('form')[7].onsubmit = function(event) {
+            event.preventDefault();
+            var answers = [
+                document.getElementById('answer23').value,
+                document.getElementById('answer24').value,
+                document.getElementById('answer25').value,
+                document.getElementById('answer26').value,
+                document.getElementById('answer27').value,
+                document.getElementById('answer28').value,
+                document.getElementById('answer29').value,
+                document.getElementById('answer30').value,
+                document.getElementById('answer31').value
+            ];
+
+            var score = 0;
+            for (var i = 0; i < answers.length; i++) {
+                if (answers[i] === correctAnswers8[i]) {
+                    score++;
+                }
+            }
+
+            alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers8.length);
+        };
+    </script>
+
+    <h2>DEBATE</h2>
+    <p>Debate adalah diskusi formal antara dua pihak yang memiliki pandangan berbeda mengenai suatu topik.</p>
+    <p>LATIHAN:</p>
+    <p>Bagilah kelas menjadi dua kelompok, yaitu pro dan kontra. Setiap kelompok akan mendapatkan topik berikut untuk didiskusikan!</p>
+    <ol>
+        <li>Should students wear uniforms to school?</li>
+        <li>Is homework necessary for students?</li>
+        <li>Should students be allowed to use smartphones in class?</li>
+    </ol>
+    <p>Setiap kelompok akan diberikan waktu 5 menit untuk mempersiapkan argumen dan 10 menit untuk berdiskusi. Setelah itu, setiap kelompok akan mempresentasikan argumen mereka.</p>
+    <p>Setelah diskusi selesai, setiap siswa akan diminta untuk menuliskan kesimpulan dari diskusi tersebut.</p>
+    <p>Good luck!</p>
+    <p>LATIHAN SOAL:</p>
+    <p>Saksikan video debat berikut,</p>
+    <iframe src="https://www.youtube.com/embed/CweqW7Pzxz8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <p>dan jawablah pertanyaan-pertanyaan berikut!</p>
+    <p><i>1. What is the topic of the debate?
+        <br>2. Who are the speakers in the debate?
+        <br>3. What are the arguments presented by each side?
+        <br>4. What is the conclusion of the debate?</i></p>
+    <i>gunakan huruf kecil! Terdapat trigger didalam kolom jawaban :)</i>
+    <form>
+        <label for="answer32">Jawaban 1:</label>
+        <input placeholder="wage,covid,matters" type="text" id="answer32" name="answer32" required>
+        <br>
+        <label for="answer33">Jawaban 2:</label>
+        <input placeholder="trump,biden" type="text" id="answer33" name="answer33" required>
+        <br>
+        <label for="answer34">Jawaban 3:</label>
+        <input placeholder="race relations and white supremacy and substance amid chaos" type="text" id="answer34" name="answer34" required>
+        <br>
+        <label for="answer35">Jawaban 4:</label>
+        <input placeholder="the conclusion of the debate is not explicitly stated in the provided video" type="text" id="answer35" name="answer35" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        // Define the correct answers
+        var correctAnswers9 = ['minimum wage, covid19 pandemic, and other policy matters', 'donald trump and joe biden', 'race relations and white supremacy and substance amid chaos',
+        'the conclusion of the debate is not explicitly stated in the provided video'];
+
+        // Validate the answers
+        document.querySelectorAll('form')[8].onsubmit = function(event) {
+            event.preventDefault();
+            var answers = [
+                document.getElementById('answer32').value,
+                document.getElementById('answer33').value,
+                document.getElementById('answer34').value,
+                document.getElementById('answer35').value
+            ];
+
+            var score = 0;
+            for (var i = 0; i < answers.length; i++) {
+                if (answers[i] === correctAnswers9[i]) {
+                    score++;
+                }
+            }
+
+            alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers9.length);
+        };
+    </script>
+    
+    <h2>PREFERENCE</h2>
+    <p>Preference adalah ungkapan yang digunakan untuk menyatakan pilihan atau keinginan seseorang.</p>
+    <p>Contoh penggunaan preference:</p>
+    <ul>
+        <li>I prefer tea to coffee.</li>
+        <li>She likes reading more than watching TV.</li>
+        <li>He would rather stay at home than go out.</li>
+    </ul>
+    <p>LATIHAN:</p>
+    <p>Ubahlah kondisi berikut ke dalam bentuk kalimat preference! Dalam bahasa inggris!</p>
+    <ol>
+        <li>seorang perempuan, lebih suka membaca ketimbang menonton tv</li>
+        <li>seorang pria, lebih suka dirumah ketimbang keluar</li>
+        <li>diri sendiri, lebih suka teh ketimbang kopi</li>
+    </ol>
+    <i>gunakan huruf kecil!</i>
+    <form>
+        <label for="answer36">Jawaban 1:</label>
+        <input type="text" id="answer36" name="answer36" required>
+        <br>
+        <label for="answer37">Jawaban 2:</label>
+        <input type="text" id="answer37" name="answer37" required>
+        <br>
+        <label for="answer38">Jawaban 3:</label>
+        <input type="text" id="answer38" name="answer38" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        // Define the correct answers
+        var correctAnswers10 = ['she likes reading more than watching tv', 'he would rather stay at home than go out', 'i prefer tea to coffee'];
+
+        // Validate the answers
+        document.querySelectorAll('form')[9].onsubmit = function(event) {
+            event.preventDefault();
+            var answers = [
+                document.getElementById('answer36').value,
+                document.getElementById('answer37').value,
+                document.getElementById('answer38').value
+            ];
+
+            var score = 0;
+            for (var i = 0; i < answers.length; i++) {
+                if (answers[i] === correctAnswers10[i]) {
+                    score++;
+                }
+            }
+
+            alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers10.length);
+        };
+    </script>
+
+    <h2>CINEMATIC LANGUAGE LEARNING</h2>
+    <p>Cinematic language learning adalah metode belajar bahasa Inggris dengan menonton film atau serial TV.</p>
+    <p>LATIHAN:</p>
+    <p>Saksikan video berikut dan jawablah pertanyaan-pertanyaan berikut!</p>
+    <iframe src="https://www.youtube.com/embed/1Z8X4pZ8QKU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <p><i>1. What is the title of the movie?
+        <br>2. Who are the main characters in the movie?
+        <br>3. What is the plot of the movie?
+        <br>4. What is the moral lesson of the movie?</i></p>
+    <i>gunakan huruf kecil! Terdapat trigger didalam kolom jawaban :)</i>
+    <form>
+        <label for="answer39">Jawaban 1:</label>
+        <input placeholder="the pursuit of happyness" type="text" id="answer39" name="answer39" required>
+        <br>
+        <label for="answer40">Jawaban 2:</label>
+        <input placeholder="chris gardner, christopher, linda" type="text" id="answer40" name="answer40" required>
+        <br>
+        <label for="answer41">Jawaban 3:</label>
+        <input placeholder="the pursuit of happyness is a 2006 american biographical drama film based on the life of chris gardner, who went from being homeless to owning a successful brokerage firm. the film follows gardner as he struggles to make ends meet while caring for his young son, christopher, and pursuing an internship at a prestigious stock brokerage firm. despite facing numerous challenges and setbacks, gardner remains determined to create a better life for himself and his son." type="text" id="answer41" name="answer41" required>
+        <br>
+        <label for="answer42">Jawaban 4:</label>
+        <input placeholder="the moral lesson of the movie is to never give up on your dreams, no matter how difficult the circumstances may be." type="text" id="answer42" name="answer42" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        // Define the correct answers
+        var correctAnswers11 = ['the pursuit of happyness', 'chris gardner, christopher, linda',
+        'the pursuit of happyness is a 2006 american biographical drama film based on the life of chris gardner, who went from being homeless to owning a successful brokerage firm. the film follows gardner as he struggles to make ends meet while caring for his young son, christopher, and pursuing an internship at a prestigious stock brokerage firm. despite facing numerous challenges and setbacks, gardner remains determined to create a better life for himself and his son.',
+        'the moral lesson of the movie is to never give up on your dreams, no matter how difficult the circumstances may be'];
+
+        // Validate the answers
+        document.querySelectorAll('form')[10].onsubmit = function(event) {
+            event.preventDefault();
+            var answers = [
+                document.getElementById('answer39').value,
+                document.getElementById('answer40').value,
+                document.getElementById('answer41').value,
+                document.getElementById('answer42').value
+            ];
+
+            var score = 0;
+            for (var i = 0; i < answers.length; i++) {
+                if (answers[i] === correctAnswers11[i]) {
+                    score++;
+                }
+            }
+
+            alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers11.length);
+        };
+    </script>
+    <p>silahkan tonton beberapa koleksi video berikut,</p>
+    <iframe src="https://www.youtube.com/embed/neY2xVmOfUM" title="Batman Begins (2005) Official Trailer #1 - Christopher Nolan Movie" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/EXeTwQWrcwY" title="The Dark Knight (2008) Official Trailer #1 - Christopher Nolan Movie HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/GokKUqLcvD8" title="The Dark Knight Rises Official Movie Trailer Christian Bale, Batman Movie (2012) HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/F9cBVm9gtKU" title="Snow White &amp; the Huntsman Official Trailer #1 - Charlize Theron, Kristin Stewart (2012) HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/6kw1UVovByw" title="SKYFALL - Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/ZjogdKObxrI" title="Enemy of the State (1998) Trailer #1 | Movieclips Classic Trailers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/JOddp-nlNvQ" title="Thor - Trailer (OFFICIAL)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
     <!--
     <a href="level2.html">Next</a>
     <a href="index.html">Back to Home</a>
