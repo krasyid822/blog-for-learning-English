@@ -1,204 +1,193 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>English Conservation I</title>
-    <style>
-        body {
-            font-family: "Arial", sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
     <script>
-        // Retrieve the name from the index.html file
-        var name = localStorage.getItem('name');
+      // Retrieve the name from the index.html file
+      let name = localStorage.getItem("name");
 
-        // Display the welcome message
-        window.onload = function() {
-            var welcomeMessage = document.getElementById('welcome-message');
-            welcomeMessage.innerHTML = 'Selamat Datang di Kelas Konservasi I, \n'+ name + '!';
-        };
+      // Display the welcome message
+      window.onload = function () {
+        let welcomeMessage = document.getElementById("welcome-message");
+        welcomeMessage.innerHTML = "Selamat Datang di Kelas Konservasi I, \n" + name + "!";
+      };
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <h1 id="welcome-message"></h1>
     <h2>TO-BE</h2>
     <p>TO-BE adalah kata kerja yang digunakan untuk menyatakan keadaan atau situasi yang akan terjadi di masa depan. TO-BE terdiri dari beberapa bentuk, yaitu:</p>
     <ul>
-        <li>am</li>
-        <li>is</li>
-        <li>are</li>
+      <li>am</li>
+      <li>is</li>
+      <li>are</li>
     </ul>
     <p>Contoh penggunaan TO-BE:</p>
     <ul>
-        <li>I am a student.</li>
-        <li>She is a teacher.</li>
-        <li>We are students.</li>
+      <li>I am a student.</li>
+      <li>She is a teacher.</li>
+      <li>We are students.</li>
     </ul>
     <p>LATIHAN:</p>
     <p>Ubahlah kalimat-kalimat berikut ke dalam bentuk TO-BE!</p>
     <ol>
-        <li>She a doctor.</li>
-        <li>They students.</li>
-        <li>He a teacher.</li>
+      <li>She a doctor.</li>
+      <li>They students.</li>
+      <li>He a teacher.</li>
     </ol>
     <i>gunakan huruf kecil!</i>
     <form>
-        <label for="answer1">Jawaban 1:</label>
-        <input type="text" id="answer1" name="answer1" required>
-        <br>
-        <label for="answer2">Jawaban 2:</label>
-        <input type="text" id="answer2" name="answer2" required>
-        <br>
-        <label for="answer3">Jawaban 3:</label>
-        <input type="text" id="answer3" name="answer3" required>
-        <br>
-        <input type="submit" value="Submit">
+      <label for="answer1">Jawaban 1:</label>
+      <input type="text" id="answer1" name="answer1" required />
+      <br />
+      <label for="answer2">Jawaban 2:</label>
+      <input type="text" id="answer2" name="answer2" required />
+      <br />
+      <label for="answer3">Jawaban 3:</label>
+      <input type="text" id="answer3" name="answer3" required />
+      <br />
+      <input type="submit" value="Submit" />
     </form>
     <script>
-        // Define the correct answers
-        var correctAnswers = ['she is a doctor', 'they are students', 'he is a teacher'];
+      // Define the correct answers
+      let correctAnswers = ["she is a doctor", "they are students", "he is a teacher"];
 
-        // Validate the answers
-        document.querySelector('form').onsubmit = function(event) {
-            event.preventDefault();
-            var answers = [
-                document.getElementById('answer1').value,
-                document.getElementById('answer2').value,
-                document.getElementById('answer3').value
-            ];
+      // Validate the answers
+      document.querySelector("form").onsubmit = function (event) {
+        event.preventDefault();
+        let answers = [document.getElementById("answer1").value, document.getElementById("answer2").value, document.getElementById("answer3").value];
 
-            var score = 0;
-            for (var i = 0; i < answers.length; i++) {
-                if (answers[i] === correctAnswers[i]) {
-                    score++;
-                }
-            }
+        let score = 0;
+        for (let i = 0; i < answers.length; i++) {
+          if (answers[i] === correctAnswers[i]) {
+            score++;
+          }
+        }
 
-            alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers.length);
-        };
+        alert("Jawaban Benar: " + score + " dari " + correctAnswers.length);
+      };
     </script>
 
     <h2>PART OF SPEECH</h2>
     <p>Part of speech adalah klasifikasi kata berdasarkan fungsinya dalam kalimat. Part of speech terdiri dari beberapa jenis, yaitu:</p>
     <ul>
-        <li>Noun</li>
-        <li>Verb</li>
-        <li>Adjective</li>
-        <li>Adverb</li>
-        <li>Pronoun</li>
-        <li>Preposition</li>
-        <li>Conjunction</li>
-        <li>Interjection</li>
+      <li>Noun</li>
+      <li>Verb</li>
+      <li>Adjective</li>
+      <li>Adverb</li>
+      <li>Pronoun</li>
+      <li>Preposition</li>
+      <li>Conjunction</li>
+      <li>Interjection</li>
     </ul>
     <p>Contoh penggunaan part of speech:</p>
     <ul>
-        <li>Noun: I am a student.</li>
-        <li>Verb: She is teaching English.</li>
-        <li>Adjective: He is a good student.</li>
-        <li>Adverb: She speaks English fluently.</li>
-        <li>Pronoun: They are students.</li>
-        <li>Preposition: She is in the classroom.</li>
-        <li>Conjunction: She is a teacher and a student.</li>
-        <li>Interjection: Wow! You speak English fluently.</li>
+      <li>Noun: I am a student.</li>
+      <li>Verb: She is teaching English.</li>
+      <li>Adjective: He is a good student.</li>
+      <li>Adverb: She speaks English fluently.</li>
+      <li>Pronoun: They are students.</li>
+      <li>Preposition: She is in the classroom.</li>
+      <li>Conjunction: She is a teacher and a student.</li>
+      <li>Interjection: Wow! You speak English fluently.</li>
     </ul>
     <p>LATIHAN:</p>
     <p>Sebutkan jenis part of speech dari kata-kata berikut!</p>
     <ol>
-        <li>She is a student.</li>
-        <li>They studied hard for their exams last night.</li>
-        <li>The sky is blue today.</li>
-        <li>I need to buy some groceries from the store.</li>
+      <li>She is a student.</li>
+      <li>They studied hard for their exams last night.</li>
+      <li>The sky is blue today.</li>
+      <li>I need to buy some groceries from the store.</li>
     </ol>
     <i>gunakan huruf kecil!</i>
     <form>
-        <label for="answer4">Jawaban 1:</label>
-        <input type="text" id="answer4" name="answer4" required>
-        <br>
-        <label for="answer5">Jawaban 2:</label>
-        <input type="text" id="answer5" name="answer5" required>
-        <br>
-        <label for="answer6">Jawaban 3:</label>
-        <input type="text" id="answer6" name="answer6" required>
-        <br>
-        <label for="answer7">Jawaban 4:</label>
-        <input type="text" id="answer7" name="answer7" required>
-        <br>
-        <input type="submit" value="Submit">
+      <label for="answer4">Jawaban 1:</label>
+      <input type="text" id="answer4" name="answer4" required />
+      <br />
+      <label for="answer5">Jawaban 2:</label>
+      <input type="text" id="answer5" name="answer5" required />
+      <br />
+      <label for="answer6">Jawaban 3:</label>
+      <input type="text" id="answer6" name="answer6" required />
+      <br />
+      <label for="answer7">Jawaban 4:</label>
+      <input type="text" id="answer7" name="answer7" required />
+      <br />
+      <input type="submit" value="Submit" />
     </form>
     <script>
-        // Define the correct answers
-        var correctAnswers2 = ['pronoun', 'verb', 'adjective', 'noun'];
+      // Define the correct answers
+      let correctAnswers2 = ["pronoun", "verb", "adjective", "noun"];
 
-        // Validate the answers
-        document.querySelectorAll('form')[1].onsubmit = function(event) {
-            event.preventDefault();
-            var answers = [
-                document.getElementById('answer4').value,
-                document.getElementById('answer5').value,
-                document.getElementById('answer6').value,
-                document.getElementById('answer7').value
-            ];
+      // Validate the answers
+      document.querySelectorAll("form")[1].onsubmit = function (event) {
+        event.preventDefault();
+        let answers = [document.getElementById("answer4").value, document.getElementById("answer5").value, document.getElementById("answer6").value, document.getElementById("answer7").value];
 
-            var score = 0;
-            for (var i = 0; i < answers.length; i++) {
-                if (answers[i] === correctAnswers2[i]) {
-                    score++;
-                }
-            }
+        let score = 0;
+        for (let i = 0; i < answers.length; i++) {
+          if (answers[i] === correctAnswers2[i]) {
+            score++;
+          }
+        }
 
-            alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers2.length);
-        };
+        alert("Jawaban Benar: " + score + " dari " + correctAnswers2.length);
+      };
     </script>
 
     <h2>CLOZE EXERCISE</h2>
     <p>Cloze exercise adalah latihan mengisi bagian yang kosong dalam suatu kalimat.</p>
     <ol>
-        <li>She is a __________.</li>
-        <li>They are __________.</li>
-        <li>He is a __________.</li>
+      <li>She is a __________.</li>
+      <li>They are __________.</li>
+      <li>He is a __________.</li>
     </ol>
     <p>LATIHAN:</p>
-    <p>Isilah bagian yang kosong dalam kalimat berikut!
-        <br>Putar audio untuk mengetahui jawabannya.</p>
-        <p><i>Once upon a time, in a faraway kingdom, there lived a kind-hearted girl named __________. She was forced to work as a servant in her own home by her wicked stepmother and stepsisters. Despite her hardships, Cinderella remained gentle and hopeful, finding solace in the company of the little birds and mice that befriended her.
-            <br><br>One day, an invitation to the royal ball arrived at Cinderella's doorstep. Overjoyed at the prospect of attending the grand event, she dreamt of dancing with the prince and escaping her dreary life, if only for a night. With the help of her fairy godmother, Cinderella's tattered dress was transformed into a magnificent gown, and a pumpkin into a beautiful carriage.
-            <br><br>As Cinderella entered the __________, she caught the eye of the prince, who was captivated by her beauty and grace. They danced the night away until the clock struck midnight, reminding Cinderella of the impending spell's end. In her haste to depart, she left behind a glass slipper, the only clue to her identity.
-            <br><br>The prince searched the kingdom for the mysterious maiden who had stolen his heart, fitting the glass slipper on every maiden's foot until he arrived at Cinderella's humble home. Upon seeing her, he knew she was the one he had been searching for. And so, Cinderella's story ended with a happily __________, as she married the prince and left her life of servitude behind.</i></p>
-    <audio src="audio1.FLAC" controls controlsList="nodownload"></audio><br>
-            <i>gunakan huruf kecil!</i>
+    <p>Isilah bagian yang kosong dalam kalimat berikut! <br />Putar audio untuk mengetahui jawabannya.</p>
+    <p>
+      <i
+        >Once upon a time, in a faraway kingdom, there lived a kind-hearted girl named __________. She was forced to work as a servant in her own home by her wicked stepmother and stepsisters. Despite her hardships, Cinderella remained
+        gentle and hopeful, finding solace in the company of the little birds and mice that befriended her. <br /><br />One day, an invitation to the royal ball arrived at Cinderella's doorstep. Overjoyed at the prospect of attending the
+        grand event, she dreamt of dancing with the prince and escaping her dreary life, if only for a night. With the help of her fairy godmother, Cinderella's tattered dress was transformed into a magnificent gown, and a pumpkin into a
+        beautiful carriage. <br /><br />As Cinderella entered the __________, she caught the eye of the prince, who was captivated by her beauty and grace. They danced the night away until the clock struck midnight, reminding Cinderella of
+        the impending spell's end. In her haste to depart, she left behind a glass slipper, the only clue to her identity. <br /><br />The prince searched the kingdom for the mysterious maiden who had stolen his heart, fitting the glass
+        slipper on every maiden's foot until he arrived at Cinderella's humble home. Upon seeing her, he knew she was the one he had been searching for. And so, Cinderella's story ended with a happily __________, as she married the prince
+        and left her life of servitude behind.</i
+      >
+    </p>
+    <audio src="audio1.FLAC" controls controlsList="nodownload"></audio><br />
+    <i>gunakan huruf kecil!</i>
     <form>
-        <label for="answer8">Jawaban 1:</label>
-        <input type="text" id="answer8" name="answer8" required>
-        <br>
-        <label for="answer9">Jawaban 2:</label>
-        <input type="text" id="answer9" name="answer9" required>
-        <br>
-        <label for="answer10">Jawaban 3:</label>
-        <input type="text" id="answer10" name="answer10" required>
-        <br>
-        <input type="submit" value="Submit">
+      <label for="answer8">Jawaban 1:</label>
+      <input type="text" id="answer8" name="answer8" required />
+      <br />
+      <label for="answer9">Jawaban 2:</label>
+      <input type="text" id="answer9" name="answer9" required />
+      <br />
+      <label for="answer10">Jawaban 3:</label>
+      <input type="text" id="answer10" name="answer10" required />
+      <br />
+      <input type="submit" value="Submit" />
     </form>
     <script>
-        // Define the correct answers
-        var correctAnswers3 = ['cinderella', 'ballroom', 'ever after'];
+      // Define the correct answers
+      let correctAnswers3 = ["cinderella", "ballroom", "ever after"];
 
-        // Validate the answers
-        document.querySelectorAll('form')[2].onsubmit = function(event) {
-            event.preventDefault();
-            var answers = [
-                document.getElementById('answer8').value,
-                document.getElementById('answer9').value,
-                document.getElementById('answer10').value
-            ];
+      // Validate the answers
+      document.querySelectorAll("form")[2].onsubmit = function (event) {
+        event.preventDefault();
+        let answers = [document.getElementById("answer8").value, document.getElementById("answer9").value, document.getElementById("answer10").value];
 
-            var score = 0;
-            for (var i = 0; i < answers.length; i++) {
-                if (answers[i] === correctAnswers3[i]) {
-                    score++;
-                }
-            }
+        let score = 0;
+        for (let i = 0; i < answers.length; i++) {
+          if (answers[i] === correctAnswers3[i]) {
+            score++;
+          }
+        }
 
-            alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers3.length);
-        };
+        alert("Jawaban Benar: " + score + " dari " + correctAnswers3.length);
+      };
     </script>
 
     <h2>DESCRIBING PERSON</h2>
@@ -206,217 +195,207 @@
     <p>LATIHAN:</p>
     <p>Deskripsikan orang-orang berikut berdasarkan ciri-ciri fisik dan kepribadian!</p>
     <ol>
-        <li>a female teacher, tall and slim, long black hair and brown eyes, kind and patient.</li>
-        <li>a doctor, short and chubby, short brown hair and blue eyes, friendly and helpful.</li>
-        <li>some students, tall and thin, long blonde hair and green eyes, smart and hardworking.</li>
+      <li>a female teacher, tall and slim, long black hair and brown eyes, kind and patient.</li>
+      <li>a doctor, short and chubby, short brown hair and blue eyes, friendly and helpful.</li>
+      <li>some students, tall and thin, long blonde hair and green eyes, smart and hardworking.</li>
     </ol>
     <i>gunakan huruf kecil, pronoun (misalnya: he, she, they), dan berurutan sesuai soal!</i>
     <form>
-        <label for="answer11">Jawaban 1:</label>
-        <input type="text" id="answer11" name="answer11" required>
-        <br>
-        <label for="answer12">Jawaban 2:</label>
-        <input type="text" id="answer12" name="answer12" required>
-        <br>
-        <label for="answer13">Jawaban 3:</label>
-        <input type="text" id="answer13" name="answer13" required>
-        <br>
-        <input type="submit" value="Submit">
+      <label for="answer11">Jawaban 1:</label>
+      <input type="text" id="answer11" name="answer11" required />
+      <br />
+      <label for="answer12">Jawaban 2:</label>
+      <input type="text" id="answer12" name="answer12" required />
+      <br />
+      <label for="answer13">Jawaban 3:</label>
+      <input type="text" id="answer13" name="answer13" required />
+      <br />
+      <input type="submit" value="Submit" />
     </form>
     <script>
-        // Define the correct answers
-        var correctAnswers4 = ['she is a teacher. she is tall and slim. she has long black hair and brown eyes. she is kind and patient',
-        'he is a doctor. he is short and chubby. he has short brown hair and blue eyes. he is friendly and helpful',
-        'they are students. they are tall and thin. they have long blonde hair and green eyes. they are smart and hardworking'];
+      // Define the correct answers
+      let correctAnswers4 = [
+        "she is a teacher. she is tall and slim. she has long black hair and brown eyes. she is kind and patient",
+        "he is a doctor. he is short and chubby. he has short brown hair and blue eyes. he is friendly and helpful",
+        "they are students. they are tall and thin. they have long blonde hair and green eyes. they are smart and hardworking",
+      ];
 
-        // Validate the answers
-        document.querySelectorAll('form')[3].onsubmit = function(event) {
-            event.preventDefault();
-            var answers = [
-                document.getElementById('answer11').value,
-                document.getElementById('answer12').value,
-                document.getElementById('answer13').value
-            ];
+      // Validate the answers
+      document.querySelectorAll("form")[3].onsubmit = function (event) {
+        event.preventDefault();
+        let answers = [document.getElementById("answer11").value, document.getElementById("answer12").value, document.getElementById("answer13").value];
 
-            var score = 0;
-            for (var i = 0; i < answers.length; i++) {
-                if (answers[i] === correctAnswers4[i]) {
-                    score++;
-                }
-            }
+        let score = 0;
+        for (let i = 0; i < answers.length; i++) {
+          if (answers[i] === correctAnswers4[i]) {
+            score++;
+          }
+        }
 
-            alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers4.length);
-        };
+        alert("Jawaban Benar: " + score + " dari " + correctAnswers4.length);
+      };
     </script>
 
     <h2>BUSINESS CALL</h2>
     <p>Business call adalah latihan untuk berbicara di telepon dalam situasi bisnis.</p>
     <p>LATIHAN SOAL:</p>
     <p>Perhatikan percakapan berikut dan jawablah pertanyaan-pertanyaan dibawahnya!</p>
-    <p><i>Receptionist: Good morning, XYZ Company. How may I help you?
-        <br>Caller: Good morning. This is John from ABC Company. I would like to speak to Mr. Smith, please.
-        <br>Receptionist: I'm sorry, but Mr. Smith is in a meeting right now. Would you like to leave a message?
-        <br>Caller: Yes, please. Could you tell him that I called and ask him to return my call as soon as possible?
-        <br>Receptionist: Of course. May I have your name and contact number, please?
-        <br>Caller: My name is John Doe, and you can reach me at 123-456-7890.
-        <br>Receptionist: Thank you, Mr. Doe. I will make sure to pass along your message to Mr. Smith.
-        <br>Caller: Thank you. Have a great day.
-        <br>Receptionist: You too. Goodbye.</i></p>
+    <p>
+      <i
+        >Receptionist: Good morning, XYZ Company. How may I help you? <br />Caller: Good morning. This is John from ABC Company. I would like to speak to Mr. Smith, please. <br />Receptionist: I'm sorry, but Mr. Smith is in a meeting right
+        now. Would you like to leave a message? <br />Caller: Yes, please. Could you tell him that I called and ask him to return my call as soon as possible? <br />Receptionist: Of course. May I have your name and contact number, please?
+        <br />Caller: My name is John Doe, and you can reach me at 123-456-7890. <br />Receptionist: Thank you, Mr. Doe. I will make sure to pass along your message to Mr. Smith. <br />Caller: Thank you. Have a great day.
+        <br />Receptionist: You too. Goodbye.</i
+      >
+    </p>
     <p>Pertanyaan:</p>
     <ol>
-        <li>Who is the caller?</li>
-        <li>What is the caller's contact number?</li>
-        <li>What is the receptionist's response to the caller's request?</li>
+      <li>Who is the caller?</li>
+      <li>What is the caller's contact number?</li>
+      <li>What is the receptionist's response to the caller's request?</li>
     </ol>
     <i>gunakan huruf kecil!</i>
     <form>
-        <label for="answer14">Jawaban 1:</label>
-        <input type="text" id="answer14" name="answer14" required>
-        <br>
-        <label for="answer15">Jawaban 2:</label>
-        <input type="text" id="answer15" name="answer15" required>
-        <br>
-        <label for="answer16">Jawaban 3:</label>
-        <input type="text" id="answer16" name="answer16" required>
-        <br>
-        <input type="submit" value="Submit">
+      <label for="answer14">Jawaban 1:</label>
+      <input type="text" id="answer14" name="answer14" required />
+      <br />
+      <label for="answer15">Jawaban 2:</label>
+      <input type="text" id="answer15" name="answer15" required />
+      <br />
+      <label for="answer16">Jawaban 3:</label>
+      <input type="text" id="answer16" name="answer16" required />
+      <br />
+      <input type="submit" value="Submit" />
     </form>
     <script>
-        // Define the correct answers
-        var correctAnswers5 = ['john doe', '123-456-7890', 'i will make sure to pass along your message to mr. smith'];
+      // Define the correct answers
+      let correctAnswers5 = ["john doe", "123-456-7890", "i will make sure to pass along your message to mr. smith"];
 
-        // Validate the answers
-        document.querySelectorAll('form')[4].onsubmit = function(event) {
-            event.preventDefault();
-            var answers = [
-                document.getElementById('answer14').value,
-                document.getElementById('answer15').value,
-                document.getElementById('answer16').value
-            ];
+      // Validate the answers
+      document.querySelectorAll("form")[4].onsubmit = function (event) {
+        event.preventDefault();
+        let answers = [document.getElementById("answer14").value, document.getElementById("answer15").value, document.getElementById("answer16").value];
 
-            var score = 0;
-            for (var i = 0; i < answers.length; i++) {
-                if (answers[i] === correctAnswers5[i]) {
-                    score++;
-                }
-            }
+        let score = 0;
+        for (let i = 0; i < answers.length; i++) {
+          if (answers[i] === correctAnswers5[i]) {
+            score++;
+          }
+        }
 
-            alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers5.length);
-        };
+        alert("Jawaban Benar: " + score + " dari " + correctAnswers5.length);
+      };
     </script>
     <p>LATIHAN PRAKTIK:</p>
     <p>Praktikkan kalimat berikut dengan teman atau keluarga!</p>
     <p><i>Receptionist: Good morning, XYZ Company. How may I help you?</i></p>
-        <div id="result">Waiting for speech input...</div>
+    <div id="result">Waiting for speech input...</div>
     <button id="startButton">Start Speech Recognition</button>
     <script>
-        // Mendapatkan teks dari suara menggunakan Web Speech API
-        function getSpeechToText() {
-            let recognition = new webkitSpeechRecognition() || speechRecognition();
-            recognition.lang = 'en-US';
+      // Mendapatkan teks dari suara menggunakan Web Speech API
+      function getSpeechToText() {
+        let recognition = new webkitSpeechRecognition() || speechRecognition();
+        recognition.lang = "en-US";
 
-            recognition.onresult = function(event) {
-                let speechToText = event.results[0][0].transcript;
-                console.log('Speech to text:', speechToText);
+        recognition.onresult = function (event) {
+          let speechToText = event.results[0][0].transcript;
+          console.log("Speech to text:", speechToText);
 
-                // Membandingkan teks
-                let text = "Good morning, XYZ Company. How may I help you?";
-                let similarityRatio = similarity(text.toLowerCase(), speechToText.toLowerCase());
-                console.log("Similarity ratio between text and speech:", similarityRatio);
+          // Membandingkan teks
+          let text = "Good morning, XYZ Company. How may I help you?";
+          let similarityRatio = similarity(text.toLowerCase(), speechToText.toLowerCase());
+          console.log("Similarity ratio between text and speech:", similarityRatio);
 
-                // Menampilkan hasil
-                let resultElement = document.getElementById('result');
-                resultElement.innerHTML = `Similarity ratio: ${similarityRatio.toFixed(2)}`;
-            };
+          // Menampilkan hasil
+          let resultElement = document.getElementById("result");
+          resultElement.innerHTML = `Similarity ratio: ${similarityRatio.toFixed(2)}`;
+        };
 
-            recognition.start();
+        recognition.start();
+      }
+
+      // Fungsi untuk membandingkan teks
+      function similarity(text1, text2) {
+        let words1 = text1.split(" ");
+        let words2 = text2.split(" ");
+        let matchCount = 0;
+
+        for (let i = 0; i < words1.length; i++) {
+          if (words2.includes(words1[i])) {
+            matchCount++;
+          }
         }
 
-        // Fungsi untuk membandingkan teks
-        function similarity(text1, text2) {
-            let words1 = text1.split(' ');
-            let words2 = text2.split(' ');
-            let matchCount = 0;
+        return matchCount / words1.length;
+      }
 
-            for (let i = 0; i < words1.length; i++) {
-                if (words2.includes(words1[i])) {
-                    matchCount++;
-                }
-            }
-
-            return matchCount / words1.length;
-        }
-
-        // Memanggil fungsi untuk mendapatkan teks dari suara saat tombol ditekan
-        document.getElementById('startButton').addEventListener('click', function() {
-            getSpeechToText();
-        });
+      // Memanggil fungsi untuk mendapatkan teks dari suara saat tombol ditekan
+      document.getElementById("startButton").addEventListener("click", function () {
+        getSpeechToText();
+      });
     </script>
 
     <h2>TENSES (PAST, NOW, FUTURE)</h2>
     <p>Tenses adalah bentuk kata kerja yang digunakan untuk menyatakan waktu kejadian. Tenses terdiri dari beberapa jenis, salah satunya:</p>
     <ul>
-        <li>Simple Present</li>
-        <li>Simple Past</li>
-        <li>Simple Future</li>
+      <li>Simple Present</li>
+      <li>Simple Past</li>
+      <li>Simple Future</li>
     </ul>
     <p>Contoh penggunaan tenses:</p>
     <ul>
-        <li>Simple Present: I go to school every day.</li>
-        <li>Simple Past: I went to school yesterday.</li>
-        <li>Simple Future: I will go to school tomorrow.</li>
+      <li>Simple Present: I go to school every day.</li>
+      <li>Simple Past: I went to school yesterday.</li>
+      <li>Simple Future: I will go to school tomorrow.</li>
     </ul>
     <p>LATIHAN:</p>
     <p>Ubahlah ketiga pronoun berikut ke dalam bentuk kalimat Simple Present, Simple Past, dan Simple Future!</p>
-    <br>Tiap kalimat memiliki 3 jawaban, yaitu Simple Present, Simple Past, dan Simple Future.
-    <br>Kalimatnya adalah "to school".
+    <br />Tiap kalimat memiliki 3 jawaban, yaitu Simple Present, Simple Past, dan Simple Future. <br />Kalimatnya adalah "to school".
     <ol>
-        <li>She</li>
-        <li>They</li>
-        <li>He</li>
+      <li>She</li>
+      <li>They</li>
+      <li>He</li>
     </ol>
     <i>gunakan huruf kecil!</i>
     <form>
-        <label for="answer17">Jawaban 1:</label>
-        <input type="text" id="answer17" name="answer17" required>
-        <br>
-        <label for="answer18">Jawaban 2:</label>
-        <input type="text" id="answer18" name="answer18" required>
-        <br>
-        <label for="answer19">Jawaban 3:</label>
-        <input type="text" id="answer19" name="answer19" required>
-        <br>
-        <input type="submit" value="Submit">
+      <label for="answer17">Jawaban 1:</label>
+      <input type="text" id="answer17" name="answer17" required />
+      <br />
+      <label for="answer18">Jawaban 2:</label>
+      <input type="text" id="answer18" name="answer18" required />
+      <br />
+      <label for="answer19">Jawaban 3:</label>
+      <input type="text" id="answer19" name="answer19" required />
+      <br />
+      <input type="submit" value="Submit" />
     </form>
     <script>
-        // Define the correct answers
-        var correctAnswers6 = ['she goes to school every day. she went to school yesterday. she will go to school tomorrow',
-        'they go to school every day. they went to school yesterday. they will go to school tomorrow',
-        'he goes to school every day. he went to school yesterday. he will go to school tomorrow'];
+      // Define the correct answers
+      let correctAnswers6 = [
+        "she goes to school every day. she went to school yesterday. she will go to school tomorrow",
+        "they go to school every day. they went to school yesterday. they will go to school tomorrow",
+        "he goes to school every day. he went to school yesterday. he will go to school tomorrow",
+      ];
 
-        // Validate the answers
-        document.querySelectorAll('form')[5].onsubmit = function(event) {
-            event.preventDefault();
-            var answers = [
-                document.getElementById('answer17').value,
-                document.getElementById('answer18').value,
-                document.getElementById('answer19').value
-            ];
+      // Validate the answers
+      document.querySelectorAll("form")[5].onsubmit = function (event) {
+        event.preventDefault();
+        let answers = [document.getElementById("answer17").value, document.getElementById("answer18").value, document.getElementById("answer19").value];
 
-            var score = 0;
-            for (var i = 0; i < answers.length; i++) {
-                if (answers[i] === correctAnswers6[i]) {
-                    score++;
-                }
-            }
+        let score = 0;
+        for (let i = 0; i < answers.length; i++) {
+          if (answers[i] === correctAnswers6[i]) {
+            score++;
+          }
+        }
 
-            alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers6.length);
-        };
+        alert("Jawaban Benar: " + score + " dari " + correctAnswers6.length);
+      };
     </script>
-    
+
     <!--
     <a href="level2.html">Next</a>
     <a href="index.html">Back to Home</a>
         -->
-</body>
+  </body>
 </html>
