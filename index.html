@@ -1,81 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Welcome, Login Page</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        form {
-            text-align: center;
-        }
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        .form-group label {
-            margin-bottom: 5px;
-        }
-        .form-group input {
-            width: 200px;
-            padding: 5px;
-        }
-        h2 {
-            text-align: center;
-        }
-        .logo-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .logo-container img {
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div>
-        <div class="logo-container">
-            <img src="logo.jpg" alt="Logo" /><br><br>
-        </div>
-        <h2>Hai! Selamat datang di<br>web kelas Konserfasi Bahasa Inggris<br>I & II</h2>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body id="login">
+    <div class="container">
+      <div class="logo-wrapper"></div>
+      <div class="form-wrapper">
+        <h2>Hai! Selamat datang di web kelas Konserfasi Bahasa Inggris I & II</h2>
         <form onsubmit="return validateForm()">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="class-level">Class Level:</label>
-                <select id="class-level" name="class-level" required>
-                    <option value="">Select Class Level</option>
-                    <option value="English Conservation I">English Conservation I</option>
-                    <option value="English Conservation II">English Conservation II</option>
-                </select>
-            </div>
-            
-            <input type="submit" value="Login">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="class-level">Class Level:</label>
+            <select id="class-level" name="class-level" required>
+              <option value="">Select Class Level</option>
+              <option value="English Conservation I">English Conservation I</option>
+              <option value="English Conservation II">English Conservation II</option>
+            </select>
+          </div>
+          <input type="submit" value="Login" />
         </form>
+      </div>
     </div>
-
     <script>
-        function validateForm() {
-            var classLevel = document.getElementById("class-level").value;
-            if (classLevel === "") {
-                alert("Please select a class level");
-                return false;
-            } else if (classLevel === "English Conservation I") {
-                var name = document.getElementById("name").value;
-                localStorage.setItem("name", name);
-                window.location.href = "level1.html";
-                return false;
-            }
+      function validateForm() {
+        let classLevel = document.getElementById("class-level").value;
+        if (classLevel === "") {
+          alert("Please select a class level");
+          return false;
+        } else if (classLevel === "English Conservation I") {
+          let name = document.getElementById("name").value;
+          localStorage.setItem("name", name);
+          window.location.href = "level1.html";
+          return false;
         }
+      }
     </script>
-</body>
+  </body>
 </html>
