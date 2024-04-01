@@ -6,6 +6,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
+}
+
+body#login {
   background-image: url(assets/bg.webp);
   background-repeat: no-repeat;
   background-position: center;
