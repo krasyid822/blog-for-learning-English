@@ -2,13 +2,20 @@
 <html>
   <head>
     <title>English Conservation I</title>
+  <link rel="stylesheet" href="style.css" />
     <style>
-        body {
+        .default {
             font-family: "Arial", sans-serif;
         }
-        form, input, button {
-            font-size: 16px;
+        form, input, button, .scale {
+            font-size: 150%;
             transform: scale(1);
+        }
+        .color {
+            color: blue;
+        }
+        ol, ul, .soal {
+          font-size: small;
         }
     </style>
     <script>
@@ -18,12 +25,14 @@
         // Display the welcome message
         window.onload = function() {
             var welcomeMessage = document.getElementById('welcome-message');
-            welcomeMessage.innerHTML = 'Selamat Datang di Kelas Konservasi I, \n'+ name + '!';
+            welcomeMessage.innerHTML = name + '!';
         };
     </script>
 </head>
 <body>
+  <h1>Selamat Datang di Kelas Konservasi I,</h1>
     <h1 id="welcome-message"></h1>
+--------------------------------------
     <h2>TO-BE</h2>
     <p>TO-BE adalah kata kerja yang digunakan untuk menyatakan keadaan atau situasi yang akan terjadi di masa depan. TO-BE terdiri dari beberapa bentuk, yaitu:</p>
     <ul>
@@ -37,7 +46,7 @@
         <li>She is a teacher.</li>
         <li>We are students.</li>
     </ul>
-    <p>LATIHAN:</p>
+    <p class="color">LATIHAN:</p>
     <p>Ubahlah kalimat-kalimat berikut ke dalam bentuk TO-BE!</p>
     <ol>
         <li>She a doctor.</li>
@@ -80,7 +89,7 @@
             alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers.length);
         };
     </script>
-
+--------------------------------------
     <h2>PART OF SPEECH</h2>
     <p>Part of speech adalah klasifikasi kata berdasarkan fungsinya dalam kalimat. Part of speech terdiri dari beberapa jenis, yaitu:</p>
     <ul>
@@ -103,160 +112,67 @@
         <li>Preposition: She is in the classroom.</li>
         <li>Conjunction: She is a teacher and a student.</li>
     </ul>
-</body>
-</html>
-<html>
-<head>
-    <title>English Conservation I</title>
-    <style>
-        body {
-            font-family: "Arial", sans-serif;
-        }
-    </style>
-    <link rel="stylesheet" href="style.css" />
-    <script>
-      // Retrieve the name from the index.html file
-      let name = localStorage.getItem("name");
-
-      // Display the welcome message
-      window.onload = function () {
-        let welcomeMessage = document.getElementById("welcome-message");
-        welcomeMessage.innerHTML = "Selamat Datang di Kelas Konservasi I, \n" + name + "!";
-      };
-    </script>
-  </head>
-  <body>
-    <h1 id="welcome-message"></h1>
-    <h2>TO-BE</h2>
-    <p>TO-BE adalah kata kerja yang digunakan untuk menyatakan keadaan atau situasi yang akan terjadi di masa depan. TO-BE terdiri dari beberapa bentuk, yaitu:</p>
-    <ul>
-      <li>am</li>
-      <li>is</li>
-      <li>are</li>
-    </ul>
-    <p>Contoh penggunaan TO-BE:</p>
-    <ul>
-      <li>I am a student.</li>
-      <li>She is a teacher.</li>
-      <li>We are students.</li>
-    </ul>
-    <p>LATIHAN:</p>
-    <p>Ubahlah kalimat-kalimat berikut ke dalam bentuk TO-BE!</p>
+    <p class="color">LATIHAN:</p>
+    <p>Identifikasi jenis part of speech dari kalimat berikut!</p>
     <ol>
-      <li>She a doctor.</li>
-      <li>They students.</li>
-      <li>He a teacher.</li>
+        <li>She is a student.</li>
+        <li>We ate dinner at a fancy restaurant last weekend.</li>
+        <li>It's a cold day.</li>
+        <li>I need to buy some groceries from the store.</li>
     </ol>
     <i>gunakan huruf kecil!</i>
     <form>
-      <label for="answer1">Jawaban 1:</label>
-      <input type="text" id="answer1" name="answer1" required />
-      <br />
-      <label for="answer2">Jawaban 2:</label>
-      <input type="text" id="answer2" name="answer2" required />
-      <br />
-      <label for="answer3">Jawaban 3:</label>
-      <input type="text" id="answer3" name="answer3" required />
-      <br />
-      <input type="submit" value="Submit" />
+        <label for="answer4">Jawaban 1:</label>
+        <input type="text" id="answer4" name="answer4" required>
+        <br>
+        <label for="answer5">Jawaban 2:</label>
+        <input type="text" id="answer5" name="answer5" required>
+        <br>
+        <label for="answer6">Jawaban 3:</label>
+        <input type="text" id="answer6" name="answer6" required>
+        <br>
+        <label for="answer7">Jawaban 4:</label>
+        <input type="text" id="answer7" name="answer7" required>
+        <br>
+        <input type="submit" value="Submit">
     </form>
     <script>
-      // Define the correct answers
-      let correctAnswers = ["she is a doctor", "they are students", "he is a teacher"];
+        // Define the correct answers
+        var correctAnswers2 = ['pronoun', 'verb', 'adjective', 'noun'];
 
-      // Validate the answers
-      document.querySelector("form").onsubmit = function (event) {
-        event.preventDefault();
-        let answers = [document.getElementById("answer1").value, document.getElementById("answer2").value, document.getElementById("answer3").value];
+        // Validate the answers
+        document.querySelectorAll('form')[1].onsubmit = function(event) {
+            event.preventDefault();
+            var answers = [
+                document.getElementById('answer4').value,
+                document.getElementById('answer5').value,
+                document.getElementById('answer6').value,
+                document.getElementById('answer7').value
+            ];
 
-        let score = 0;
-        for (let i = 0; i < answers.length; i++) {
-          if (answers[i] === correctAnswers[i]) {
-            score++;
-          }
-        }
+            var score = 0;
+            for (var i = 0; i < answers.length; i++) {
+                if (answers[i] === correctAnswers2[i]) {
+                    score++;
+                }
+            }
 
-        alert("Jawaban Benar: " + score + " dari " + correctAnswers.length);
-      };
+            alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers2.length);
+        };
     </script>
 
-    <h2>PART OF SPEECH</h2>
-    <p>Part of speech adalah klasifikasi kata berdasarkan fungsinya dalam kalimat. Part of speech terdiri dari beberapa jenis, yaitu:</p>
-    <ul>
-      <li>Noun</li>
-      <li>Verb</li>
-      <li>Adjective</li>
-      <li>Adverb</li>
-      <li>Pronoun</li>
-      <li>Preposition</li>
-      <li>Conjunction</li>
-      <li>Interjection</li>
-    </ul>
-    <p>Contoh penggunaan part of speech:</p>
-    <ul>
-      <li>Noun: I am a student.</li>
-      <li>Verb: She is teaching English.</li>
-      <li>Adjective: He is a good student.</li>
-      <li>Adverb: She speaks English fluently.</li>
-      <li>Pronoun: They are students.</li>
-      <li>Preposition: She is in the classroom.</li>
-      <li>Conjunction: She is a teacher and a student.</li>
-      <li>Interjection: Wow! You speak English fluently.</li>
-    </ul>
-    <p>LATIHAN:</p>
-    <p>Sebutkan jenis part of speech dari kata-kata berikut!</p>
-    <ol>
-      <li>She is a student.</li>
-      <li>They studied hard for their exams last night.</li>
-      <li>The sky is blue today.</li>
-      <li>I need to buy some groceries from the store.</li>
-    </ol>
-    <i>gunakan huruf kecil!</i>
-    <form>
-      <label for="answer4">Jawaban 1:</label>
-      <input type="text" id="answer4" name="answer4" required />
-      <br />
-      <label for="answer5">Jawaban 2:</label>
-      <input type="text" id="answer5" name="answer5" required />
-      <br />
-      <label for="answer6">Jawaban 3:</label>
-      <input type="text" id="answer6" name="answer6" required />
-      <br />
-      <label for="answer7">Jawaban 4:</label>
-      <input type="text" id="answer7" name="answer7" required />
-      <br />
-      <input type="submit" value="Submit" />
-    </form>
-    <script>
-      // Define the correct answers
-      let correctAnswers2 = ["pronoun", "verb", "adjective", "noun"];
 
-      // Validate the answers
-      document.querySelectorAll("form")[1].onsubmit = function (event) {
-        event.preventDefault();
-        let answers = [document.getElementById("answer4").value, document.getElementById("answer5").value, document.getElementById("answer6").value, document.getElementById("answer7").value];
-
-        let score = 0;
-        for (let i = 0; i < answers.length; i++) {
-          if (answers[i] === correctAnswers2[i]) {
-            score++;
-          }
-        }
-
-        alert("Jawaban Benar: " + score + " dari " + correctAnswers2.length);
-      };
-    </script>
-
+--------------------------------------
     <h2>CLOZE EXERCISE</h2>
     <p>Cloze exercise adalah latihan mengisi bagian yang kosong dalam suatu kalimat.</p>
-    <ol>
+    <ol class="default">
       <li>She is a __________.</li>
       <li>They are __________.</li>
       <li>He is a __________.</li>
     </ol>
-    <p>LATIHAN:</p>
+    <p class="color">LATIHAN:</p>
     <p>Isilah bagian yang kosong dalam kalimat berikut! <br />Putar audio untuk mengetahui jawabannya.</p>
-    <p>
+    <p class="default">
       <i
         >Once upon a time, in a faraway kingdom, there lived a kind-hearted girl named __________. She was forced to work as a servant in her own home by her wicked stepmother and stepsisters. Despite her hardships, Cinderella remained
         gentle and hopeful, finding solace in the company of the little birds and mice that befriended her. <br /><br />One day, an invitation to the royal ball arrived at Cinderella's doorstep. Overjoyed at the prospect of attending the
@@ -267,8 +183,10 @@
         and left her life of servitude behind.</i
       >
     </p>
-    <audio src="audio1.FLAC" controls controlsList="nodownload"></audio><br />
-    <i>gunakan huruf kecil!</i>
+    <div style="transform: scale(2); display: flex; justify-content: center;">
+      <audio class="scale" src="audio1.FLAC" controls controlsList="nodownload"></audio><br />
+    </div>
+    <br><i>gunakan huruf kecil!</i>
     <form>
       <label for="answer8">Jawaban 1:</label>
       <input type="text" id="answer8" name="answer8" required />
@@ -300,10 +218,10 @@
         alert("Jawaban Benar: " + score + " dari " + correctAnswers3.length);
       };
     </script>
-
+--------------------------------------
     <h2>DESCRIBING PERSON</h2>
     <p>Describing person adalah latihan untuk menggambarkan seseorang berdasarkan ciri-ciri fisik dan kepribadian.</p>
-    <p>LATIHAN:</p>
+    <p class="color">LATIHAN:</p>
     <p>Deskripsikan orang-orang berikut berdasarkan ciri-ciri fisik dan kepribadian!</p>
     <ol>
       <li>a female teacher, tall and slim, long black hair and brown eyes, kind and patient.</li>
@@ -346,10 +264,10 @@
         alert("Jawaban Benar: " + score + " dari " + correctAnswers4.length);
       };
     </script>
-
+--------------------------------------
     <h2>BUSINESS CALL</h2>
     <p>Business call adalah latihan untuk berbicara di telepon dalam situasi bisnis.</p>
-    <p>LATIHAN SOAL:</p>
+    <p class="color">LATIHAN SOAL:</p>
     <p>Perhatikan percakapan berikut dan jawablah pertanyaan-pertanyaan dibawahnya!</p>
     <p>
       <i
@@ -397,10 +315,11 @@
         alert("Jawaban Benar: " + score + " dari " + correctAnswers5.length);
       };
     </script>
-    <p>LATIHAN PRAKTIK:</p>
+    <p class="color">LATIHAN PRAKTIK:</p>
     <p>Praktikkan kalimat berikut dengan teman atau keluarga!</p>
     <p><i>Receptionist: Good morning, XYZ Company. How may I help you?</i></p>
-    <div id="result">Waiting for speech input...</div>
+    <br>
+    <div id="result"><i>Waiting for speech input...</i></div>
     <button id="startButton">Start Speech Recognition</button>
     <script>
       // Mendapatkan teks dari suara menggunakan Web Speech API
@@ -445,7 +364,8 @@
         getSpeechToText();
       });
     </script>
-
+    <p></p>
+--------------------------------------
     <h2>TENSES (PAST, NOW, FUTURE)</h2>
     <p>Tenses adalah bentuk kata kerja yang digunakan untuk menyatakan waktu kejadian. Tenses terdiri dari beberapa jenis, salah satunya:</p>
     <ul>
@@ -459,7 +379,7 @@
       <li>Simple Past: I went to school yesterday.</li>
       <li>Simple Future: I will go to school tomorrow.</li>
     </ul>
-    <p>LATIHAN:</p>
+    <p class="color">LATIHAN:</p>
     <p>Ubahlah ketiga pronoun berikut ke dalam bentuk kalimat Simple Present, Simple Past, dan Simple Future!</p>
     <br />Tiap kalimat memiliki 3 jawaban, yaitu Simple Present, Simple Past, dan Simple Future. <br />Kalimatnya adalah "to school".
     <ol>
@@ -503,7 +423,7 @@
         alert("Jawaban Benar: " + score + " dari " + correctAnswers6.length);
       };
     </script>
-    
+--------------------------------------
     <h2>COMPARATIVE & SUPERLATIVE DEGREE</h2>
     <p>Comparative & superlative degree adalah bentuk kata sifat yang digunakan untuk membandingkan dua atau lebih benda atau orang.</p>
     <p>Comparative degree digunakan untuk membandingkan dua benda atau orang, sedangkan superlative degree digunakan untuk membandingkan tiga atau lebih benda atau orang.</p>
@@ -514,9 +434,9 @@
         <li>Comparative degree: This book is more interesting than that book.</li>
         <li>Superlative degree: This book is the most interesting.</li>
     </ul>
-    <p>LATIHAN:</p>
+    <p class="color">LATIHAN:</p>
     <p>Ubahlah kata sifat berikut ke dalam bentuk comparative & superlative degree!</p>
-    Pisahkan jawaban dengan koma. Contoh: <i>smaller, the smallest</i>
+    <a class="soal">Pisahkan jawaban dengan koma. Contoh: <i>smaller, the smallest</i></a>
     <ol>
         <li>good</li>
         <li>bad</li>
@@ -558,7 +478,7 @@
             alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers7.length);
         };
     </script>
-
+--------------------------------------
     <h2>MODAL</h2>
     <p>Modal adalah kata kerja bantu yang digunakan untuk menyatakan kemungkinan, keharusan, kemampuan, dan keinginan.</p>
     Kata yang termasuk dalam modal adalah: <i>can, could, may, might, must, shall, should, will, would.</i>
@@ -569,9 +489,9 @@
         <li>Should: You should apologize for your mistake.</li>
         <li>Will: They will go to the beach next weekend.</li>
     </ul>
-    <p>LATIHAN:</p>
+    <p class="color">LATIHAN:</p>
     <p>Lengkapi kalimat-kalimat berikut dengan modal yang tepat!</p>
-    <ol>
+    <ol class="default">
         <li>She ___ speak English fluently.</li>
         <li>He ___ when he was a child.</li>
         <li>You ___ the room now.</li>
@@ -642,24 +562,24 @@
             alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers8.length);
         };
     </script>
-
+--------------------------------------
     <h2>DEBATE</h2>
     <p>Debate adalah diskusi formal antara dua pihak yang memiliki pandangan berbeda mengenai suatu topik.</p>
-    <p>LATIHAN:</p>
-    <p>Bagilah kelas menjadi dua kelompok, yaitu pro dan kontra. Setiap kelompok akan mendapatkan topik berikut untuk didiskusikan!</p>
+    <p class="color">LATIHAN:</p>
+    <p class="soal">Bagilah kelas menjadi dua kelompok, yaitu pro dan kontra. Setiap kelompok akan mendapatkan topik berikut untuk didiskusikan!</p>
     <ol>
         <li>Should students wear uniforms to school?</li>
         <li>Is homework necessary for students?</li>
         <li>Should students be allowed to use smartphones in class?</li>
     </ol>
-    <p>Setiap kelompok akan diberikan waktu 5 menit untuk mempersiapkan argumen dan 10 menit untuk berdiskusi. Setelah itu, setiap kelompok akan mempresentasikan argumen mereka.</p>
-    <p>Setelah diskusi selesai, setiap siswa akan diminta untuk menuliskan kesimpulan dari diskusi tersebut.</p>
-    <p>Good luck!</p>
-    <p>LATIHAN SOAL:</p>
+    <p class="soal">Setiap kelompok akan diberikan waktu 5 menit untuk mempersiapkan argumen dan 10 menit untuk berdiskusi. Setelah itu, setiap kelompok akan mempresentasikan argumen mereka.</p>
+    <p class="soal">Setelah diskusi selesai, setiap siswa akan diminta untuk menuliskan kesimpulan dari diskusi tersebut.</p>
+    <p class="soal">Good luck!</p>
+    <p class="color">LATIHAN SOAL:</p>
     <p>Saksikan video debat berikut,</p>
-    <iframe src="https://www.youtube.com/embed/CweqW7Pzxz8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <iframe src="https://www.youtube.com/embed/CweqW7Pzxz8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" width="100%" height="600"></iframe>
     <p>dan jawablah pertanyaan-pertanyaan berikut!</p>
-    <p><i>1. What is the topic of the debate?
+    <p class="soal"><i>1. What is the topic of the debate?
         <br>2. Who are the speakers in the debate?
         <br>3. What are the arguments presented by each side?
         <br>4. What is the conclusion of the debate?</i></p>
@@ -704,7 +624,7 @@
             alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers9.length);
         };
     </script>
-    
+--------------------------------------
     <h2>PREFERENCE</h2>
     <p>Preference adalah ungkapan yang digunakan untuk menyatakan pilihan atau keinginan seseorang.</p>
     <p>Contoh penggunaan preference:</p>
@@ -713,7 +633,7 @@
         <li>She likes reading more than watching TV.</li>
         <li>He would rather stay at home than go out.</li>
     </ul>
-    <p>LATIHAN:</p>
+    <p class="color">LATIHAN:</p>
     <p>Ubahlah kondisi berikut ke dalam bentuk kalimat preference! Dalam bahasa inggris!</p>
     <ol>
         <li>seorang perempuan, lebih suka membaca ketimbang menonton tv</li>
@@ -756,37 +676,37 @@
             alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers10.length);
         };
     </script>
-
+--------------------------------------
     <h2>CINEMATIC LANGUAGE LEARNING</h2>
     <p>Cinematic language learning adalah metode belajar bahasa Inggris dengan menonton film atau serial TV.</p>
-    <p>LATIHAN:</p>
+    <p class="color">LATIHAN:</p>
     <p>Saksikan video berikut dan jawablah pertanyaan-pertanyaan berikut!</p>
-    <iframe src="https://www.youtube.com/embed/1Z8X4pZ8QKU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <iframe src="https://www.youtube.com/embed/3S95JHoudDE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" width="100%" height="600"></iframe>
     <p><i>1. What is the title of the movie?
-        <br>2. Who are the main characters in the movie?
+        <br>2. Who are the six main characters in the movie?
         <br>3. What is the plot of the movie?
         <br>4. What is the moral lesson of the movie?</i></p>
     <i>gunakan huruf kecil! Terdapat trigger didalam kolom jawaban :)</i>
     <form>
         <label for="answer39">Jawaban 1:</label>
-        <input placeholder="the pursuit of happyness" type="text" id="answer39" name="answer39" required>
+        <input placeholder="" type="text" id="answer39" name="answer39" required>
         <br>
         <label for="answer40">Jawaban 2:</label>
-        <input placeholder="chris gardner, christopher, linda" type="text" id="answer40" name="answer40" required>
+        <input placeholder="bruce,jeff,rheet,sarah,christina,steve" type="text" id="answer40" name="answer40" required>
         <br>
         <label for="answer41">Jawaban 3:</label>
-        <input placeholder="the pursuit of happyness is a 2006 american biographical drama film based on the life of chris gardner, who went from being homeless to owning a successful brokerage firm. the film follows gardner as he struggles to make ends meet while caring for his young son, christopher, and pursuing an internship at a prestigious stock brokerage firm. despite facing numerous challenges and setbacks, gardner remains determined to create a better life for himself and his son." type="text" id="answer41" name="answer41" required>
+        <input placeholder="the movie is about a group of explorers who discover a lost world filled with prehistoric creatures and must find a way to escape before they become extinct" type="text" id="answer41" name="answer41" required>
         <br>
         <label for="answer42">Jawaban 4:</label>
-        <input placeholder="the moral lesson of the movie is to never give up on your dreams, no matter how difficult the circumstances may be." type="text" id="answer42" name="answer42" required>
+        <input placeholder="the moral lesson of the movie is to respect nature and its inhabitants" type="text" id="answer42" name="answer42" required>
         <br>
         <input type="submit" value="Submit">
     </form>
     <script>
         // Define the correct answers
-        var correctAnswers11 = ['the pursuit of happyness', 'chris gardner, christopher, linda',
-        'the pursuit of happyness is a 2006 american biographical drama film based on the life of chris gardner, who went from being homeless to owning a successful brokerage firm. the film follows gardner as he struggles to make ends meet while caring for his young son, christopher, and pursuing an internship at a prestigious stock brokerage firm. despite facing numerous challenges and setbacks, gardner remains determined to create a better life for himself and his son.',
-        'the moral lesson of the movie is to never give up on your dreams, no matter how difficult the circumstances may be'];
+        var correctAnswers11 = ['king of the lost world', 'lt. challenger, ed malone, john roxton, rita summerlee, dana, and larry',
+        'the movie is about a group of explorers who discover a lost world filled with prehistoric creatures and must find a way to escape before they become extinct',
+        'the moral lesson of the movie is to respect nature and its inhabitants'];
 
         // Validate the answers
         document.querySelectorAll('form')[10].onsubmit = function(event) {
