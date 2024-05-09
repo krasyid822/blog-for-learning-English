@@ -2,6 +2,9 @@
 <html>
   <head>
       <title>English Conservation I</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <base href="page404.html"/>
+      <link rel="icon" href="icon.png" type="image/x-icon">
       <link rel="stylesheet" href="style.css" />
       <script src="script.js"></script>
       <style>
@@ -12,7 +15,7 @@
         input,
         button,
         .scale {
-          font-size: 150%;
+          font-size: 100%;
           transform: scale(1);
         }
         .color {
@@ -23,7 +26,17 @@
         .soal {
           font-size: small;
         }
-        
+        input{
+  border: none; 
+  color: white; 
+  background-color: rgb(54, 54, 54); 
+  border-radius: 20px; 
+  font-size: 1.5em; 
+  padding: 10px; 
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; t
+  ext-indent: 10px; 
+  margin: 10px;"
+}
       </style>
       <script>
         // Retrieve the name from the index.html file
@@ -32,15 +45,19 @@
         // Display the welcome message
         window.onload = function () {
           var welcomeMessage = document.getElementById("welcome-message");
-          welcomeMessage.innerHTML = name + "!";
+          welcomeMessage.innerHTML = "<center>Selamat Datang di Kelas Konservasi I, " + name + "!</center>";
         };
       </script>
     </head>
     <body>
-      <h1>Selamat Datang di Kelas Konservasi I,</h1>
-      <h1 id="welcome-message"></h1>
-      <button class="loginBtn" onclick="toggleTheme()">Dark Theme</button><br><p></p>
-      --------------------------------------
+      <h1 id="welcome-message"><center>Loading...</center></h1>
+      <table width="40%" border="0" align="center">
+        <tr><td>
+      <button class="loginBtn" onclick="toggleTheme()">Change Theme</button><br><p></p>
+    </td></tr>
+        <tr>
+          <td>
+      
       <h2>TO-BE</h2>
       <p>TO-BE adalah kata kerja yang digunakan untuk menyatakan keadaan atau situasi yang akan terjadi di masa depan. TO-BE terdiri dari beberapa bentuk, yaitu:</p>
       <ul>
@@ -97,7 +114,10 @@
           alert("Jawaban Benar: " + score + " dari " + correctAnswers.length);
         };
       </script>
-      --------------------------------------
+      </td>
+      </tr>
+      <tr>
+        <td> 
       <h2>PART OF SPEECH</h2>
       <p>Part of speech adalah klasifikasi kata berdasarkan fungsinya dalam kalimat. Part of speech terdiri dari beberapa jenis, yaitu:</p>
       <ul>
@@ -169,9 +189,10 @@
             alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers2.length);
         };
     </script>
+    </td>
+  </tr>
 
-
---------------------------------------
+<tr><td> 
     <h2>CLOZE EXERCISE</h2>
     <p>Cloze exercise adalah latihan mengisi bagian yang kosong dalam suatu kalimat.</p>
     <ol class="default">
@@ -192,21 +213,20 @@
         and left her life of servitude behind.</i
       >
     </p>
-    <div style="transform: scale(2); display: flex; justify-content: center;">
+    <div style="transform: scale(1); display: flex; justify-content: center;">
       <audio class="scale" src="audio1.FLAC" controls controlsList="nodownload"></audio><br />
     </div>
     <br><i>gunakan huruf kecil!</i>
     <form>
+      <!-- <label for="answer8" style="margin-bottom: 10px; display: inline-block; color: rgb(99, 99, 189);">Jawaban 1:</label> -->
       <label for="answer8">Jawaban 1:</label>
-      <input type="text" id="answer8" name="answer8" required />
-      <br />
+      <input type="text" id="answer8" name="answer8" required/><br>
       <label for="answer9">Jawaban 2:</label>
-      <input type="text" id="answer9" name="answer9" required />
-      <br />
+      <input type="text" id="answer9" name="answer9" required/><br>
       <label for="answer10">Jawaban 3:</label>
-      <input type="text" id="answer10" name="answer10" required />
+      <input type="text" id="answer10" name="answer10" required/>
       <br />
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Submit"/>
     </form>
     <script>
       // Define the correct answers
@@ -227,7 +247,8 @@
         alert("Jawaban Benar: " + score + " dari " + correctAnswers3.length);
       };
     </script>
---------------------------------------
+    </td></tr>
+<tr><td> 
     <h2>DESCRIBING PERSON</h2>
     <p>Describing person adalah latihan untuk menggambarkan seseorang berdasarkan ciri-ciri fisik dan kepribadian.</p>
     <p class="color">LATIHAN:</p>
@@ -273,7 +294,8 @@
         alert("Jawaban Benar: " + score + " dari " + correctAnswers4.length);
       };
     </script>
---------------------------------------
+    </td></tr>
+<tr><td> 
     <h2>BUSINESS CALL</h2>
     <p>Business call adalah latihan untuk berbicara di telepon dalam situasi bisnis.</p>
     <p class="color">LATIHAN SOAL:</p>
@@ -374,7 +396,8 @@
       });
     </script>
     <p></p>
---------------------------------------
+  </td></tr>
+<tr><td> 
     <h2>TENSES (PAST, NOW, FUTURE)</h2>
     <p>Tenses adalah bentuk kata kerja yang digunakan untuk menyatakan waktu kejadian. Tenses terdiri dari beberapa jenis, salah satunya:</p>
     <ul>
@@ -432,7 +455,8 @@
         alert("Jawaban Benar: " + score + " dari " + correctAnswers6.length);
       };
     </script>
---------------------------------------
+    </td></tr>
+<tr><td> 
     <h2>COMPARATIVE & SUPERLATIVE DEGREE</h2>
     <p>Comparative & superlative degree adalah bentuk kata sifat yang digunakan untuk membandingkan dua atau lebih benda atau orang.</p>
     <p>Comparative degree digunakan untuk membandingkan dua benda atau orang, sedangkan superlative degree digunakan untuk membandingkan tiga atau lebih benda atau orang.</p>
@@ -487,7 +511,8 @@
             alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers7.length);
         };
     </script>
---------------------------------------
+    </td></tr>
+<tr><td> 
     <h2>MODAL</h2>
     <p>Modal adalah kata kerja bantu yang digunakan untuk menyatakan kemungkinan, keharusan, kemampuan, dan keinginan.</p>
     Kata yang termasuk dalam modal adalah: <i>can, could, may, might, must, shall, should, will, would.</i>
@@ -571,7 +596,8 @@
             alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers8.length);
         };
     </script>
---------------------------------------
+    </td></tr>
+<tr><td> 
     <h2>DEBATE</h2>
     <p>Debate adalah diskusi formal antara dua pihak yang memiliki pandangan berbeda mengenai suatu topik.</p>
     <p class="color">LATIHAN:</p>
@@ -633,7 +659,8 @@
             alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers9.length);
         };
     </script>
---------------------------------------
+    </td></tr>
+<tr><td> 
     <h2>PREFERENCE</h2>
     <p>Preference adalah ungkapan yang digunakan untuk menyatakan pilihan atau keinginan seseorang.</p>
     <p>Contoh penggunaan preference:</p>
@@ -685,7 +712,8 @@
             alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers10.length);
         };
     </script>
---------------------------------------
+    </td></tr>
+<tr><td> 
     <h2>CINEMATIC LANGUAGE LEARNING</h2>
     <p>Cinematic language learning adalah metode belajar bahasa Inggris dengan menonton film atau serial TV.</p>
     <p class="color">LATIHAN:</p>
@@ -737,7 +765,10 @@
             alert('Jawaban Benar: ' + score + ' dari ' + correctAnswers11.length);
         };
     </script>
+    </td></tr>
+    <tr><td>
     <p>silahkan tonton beberapa koleksi video berikut,</p>
+    <center>
     <iframe src="https://www.youtube.com/embed/neY2xVmOfUM" title="Batman Begins (2005) Official Trailer #1 - Christopher Nolan Movie" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <iframe src="https://www.youtube.com/embed/EXeTwQWrcwY" title="The Dark Knight (2008) Official Trailer #1 - Christopher Nolan Movie HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <iframe src="https://www.youtube.com/embed/GokKUqLcvD8" title="The Dark Knight Rises Official Movie Trailer Christian Bale, Batman Movie (2012) HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -745,10 +776,13 @@
     <iframe src="https://www.youtube.com/embed/6kw1UVovByw" title="SKYFALL - Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <iframe src="https://www.youtube.com/embed/ZjogdKObxrI" title="Enemy of the State (1998) Trailer #1 | Movieclips Classic Trailers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <iframe src="https://www.youtube.com/embed/JOddp-nlNvQ" title="Thor - Trailer (OFFICIAL)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+  </center>
+  </td></tr>
+    </table>
     <!--
     <a href="level2.html">Next</a>
     <a href="index.html">Back to Home</a>
         -->
+        
   </body>
 </html>
